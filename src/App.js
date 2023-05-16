@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "bulma/css/bulma.css";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -16,31 +17,38 @@ function App() {
     setSearchCoin(event.target.value);
   };
   return (
-    <div>
-      <h1>Coins!</h1>
-      <h2>There's {coins.length} coins in this list</h2>
-      {loading ? (
-        <strong>Loading...</strong>
-      ) : (
-        <form>
-          <input onChange={onChange} type="text" placeholder="What coins?" />
-        </form>
-      )}
-      <ul>
-        {coins.map((coin) => {
-          const nameOfCoin = coin.name.toLowerCase();
-          if (nameOfCoin.includes(searchCoin)) {
-            return (
-              <li key={coin.id}>
-                {coin.name}({coin.symbol}) : ${coin.quotes.USD.price} USD
-              </li>
-            );
-          } else {
-            return null;
-          }
-        })}
-      </ul>
-    </div>
+    <section className="section">
+      <div className="container">
+        <h1 className="title">Coins!</h1>
+        <h2 className="subtitle">There's {coins.length} coins in this list</h2>
+        {loading ? (
+          <strong>Loading...</strong>
+        ) : (
+          <form className="control is-loading">
+            <input
+              className="input mb-3"
+              onChange={onChange}
+              type="text"
+              placeholder="What coins?"
+            />
+          </form>
+        )}
+        <ul>
+          {coins.map((coin) => {
+            const nameOfCoin = coin.name.toLowerCase();
+            if (nameOfCoin.includes(searchCoin)) {
+              return (
+                <li className="box my-1" key={coin.id}>
+                  {coin.name}({coin.symbol}) : ${coin.quotes.USD.price} USD
+                </li>
+              );
+            } else {
+              return null;
+            }
+          })}
+        </ul>
+      </div>
+    </section>
   );
 }
 
