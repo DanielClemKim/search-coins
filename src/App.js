@@ -36,7 +36,8 @@ function App() {
         <ul>
           {coins.map((coin) => {
             const nameOfCoin = coin.name.toLowerCase();
-            if (nameOfCoin.includes(searchCoin)) {
+            const nameOfSearch = searchCoin.toLowerCase();
+            if (nameOfCoin.includes(nameOfSearch)) {
               return (
                 <li className="box my-1" key={coin.id}>
                   {coin.name}({coin.symbol}) : ${coin.quotes.USD.price} USD
