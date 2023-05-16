@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/search-coins/static/js/main.b3f2ad7e.js",
+    "index.html": "/search-coins/index.html",
+    "main.b3f2ad7e.js.map": "/search-coins/static/js/main.b3f2ad7e.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.b3f2ad7e.js"
+  ]
+}
