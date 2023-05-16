@@ -46,19 +46,25 @@ function App() {
         <ul>
           {coins.map((coin) => {
             const nameOfCoin = coin.name.toLowerCase();
+            const nameOfSymbol = coin.symbol.toLowerCase();
+            const name = nameOfCoin + nameOfSymbol;
             const nameOfSearch = searchCoin.toLowerCase();
             const price = Math.round(coin.quotes.USD.price * 1000) / 1000;
-            if (nameOfCoin.includes(nameOfSearch)) {
+            if (name.includes(nameOfSearch)) {
               return (
-                <li className="box my-1" key={coin.id}>
-                  <b>
-                    {coin.name}({coin.symbol})
-                  </b>{" "}
-                  : ${price} USD
-                  <button className="button is-success is-small is-pulled-right px-5">
-                    Buy
-                  </button>
-                </li>
+                <div key={coin.id} className="columns mt-3">
+                  <li className="column box is-11 my-0 is-size-5">
+                    <b>
+                      {coin.name}({coin.symbol})
+                    </b>{" "}
+                    : ${price} USD
+                  </li>
+                  <div className="column">
+                    <button className="button is-success px-5">
+                      <b>Buy</b>
+                    </button>
+                  </div>
+                </div>
               );
             } else {
               return null;
