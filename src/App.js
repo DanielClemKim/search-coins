@@ -60,7 +60,7 @@ function App() {
                     : ${price} USD
                   </li>
                   <div className="column">
-                    <button className="button is-success px-5">
+                    <button className="button is-success px-5 ml-3">
                       <b>Buy</b>
                     </button>
                   </div>
