@@ -47,13 +47,14 @@ function App() {
           {coins.map((coin) => {
             const nameOfCoin = coin.name.toLowerCase();
             const nameOfSearch = searchCoin.toLowerCase();
+            const price = Math.round(coin.quotes.USD.price * 1000) / 1000;
             if (nameOfCoin.includes(nameOfSearch)) {
               return (
                 <li className="box my-1" key={coin.id}>
                   <b>
                     {coin.name}({coin.symbol})
                   </b>{" "}
-                  : ${coin.quotes.USD.price} USD
+                  : ${price} USD
                   <button className="button is-success is-small is-pulled-right px-5">
                     Buy
                   </button>
