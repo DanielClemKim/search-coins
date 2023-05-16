@@ -24,8 +24,8 @@ function App() {
         <h1 className="title">Coins!</h1>
         <h2 className="subtitle">There's {coins.length} coins in this list</h2>
         <a href="https://github.com/DanielClemKim/search-coins">
-          <button class="button is-pulled-right mb-3">
-            <span class="icon">
+          <button className="button is-pulled-right mb-3">
+            <span className="icon">
               <FontAwesomeIcon icon={faGithub} />
             </span>
             <span>GitHub</span>
