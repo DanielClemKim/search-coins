@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/search-coins/static/css/main.53bcab0a.css",
-    "main.js": "/search-coins/static/js/main.e5cde03c.js",
+    "main.js": "/search-coins/static/js/main.3b72fb35.js",
     "index.html": "/search-coins/index.html",
     "main.53bcab0a.css.map": "/search-coins/static/css/main.53bcab0a.css.map",
-    "main.e5cde03c.js.map": "/search-coins/static/js/main.e5cde03c.js.map"
+    "main.3b72fb35.js.map": "/search-coins/static/js/main.3b72fb35.js.map"
   },
   "entrypoints": [
     "static/css/main.53bcab0a.css",
-    "static/js/main.e5cde03c.js"
+    "static/js/main.3b72fb35.js"
   ]
 }
