@@ -24,12 +24,17 @@ function App() {
       .then((json) => {
         setCoins(json);
       });
+    setSearchCoin("");
   };
   return (
     <section className="section">
       <div className="container">
-        <h1 className="title">Coins!</h1>
-        <h2 className="subtitle">There's {coins.length} coins in this list</h2>
+        <h1 className="title has-text-weight-bold">COOGLE</h1>
+        <hr />
+        <h2 className="subtitle has-text-weight-semibold">
+          There's <span style={{ color: "#3a86ff" }}>{coins.length}</span> coins
+          in this list
+        </h2>
         <div className="buttons">
           <a
             href="https://github.com/DanielClemKim/search-coins"
@@ -48,6 +53,7 @@ function App() {
             <form className="column is-11 control">
               <input
                 className="input mb-3"
+                value={searchCoin}
                 onChange={onChange}
                 type="text"
                 placeholder="What coins?"
@@ -77,7 +83,8 @@ function App() {
                     <b>
                       {coin.name}({coin.symbol})
                     </b>{" "}
-                    : ${price} USD
+                    : <span className="has-text-weight-semibold"></span>${price}{" "}
+                    USD
                   </li>
                   <div className="column">
                     <button className="button is-success px-5 ml-3">
