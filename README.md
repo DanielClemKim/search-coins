@@ -16,4 +16,5 @@ Using open source css framwork [Bulma](https://bulma.io/) for designs.
 2. You can't buy actual tokens through this page.
 
 ## Example Page ⬇️
+
 <img width="1408" alt="page" src="https://github.com/DanielClemKim/search-coins/assets/106340297/92170260-1a8d-4b08-b363-6df817ba8f35">
